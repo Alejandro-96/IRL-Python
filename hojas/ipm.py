@@ -5,6 +5,7 @@ from xlwings import *
 from utils.fecha import *
 import pandas as pd
 from hojas.cartera import obtenerTabla
+import os 
 
 # Obtener ruta de la carpeta documentos
 rutaDocumentos = os.path.join(os.path.expanduser('~'), 'Documents')
@@ -34,7 +35,6 @@ def ipm(fecha: Fecha, primeraVez, desviacionEstandar, wb: xw.Book):
 
             saldoTotal = tabla['SaldoCapital'].sum()
             codigosContables = [144110, 144210,141110, 141210, 144115, 144215, 141115, 141215, 144120, 144220,141120, 141220, 144125, 144225, 141125, 14122, 140410, 140415, 140420, 140425, 140510, 140515, 140520, 140525, 144810, 144815, 144820, 144825, 145410, 145415, 145420, 145425, 145510, 145515, 145520, 145525, 146110, 146115, 146120, 146125, 146210, 146215, 146220, 146225]
-            #tabla = tabla[tabla['CodigoContable'].isin(codigosContables)]
             tabla = tabla.loc[tabla['CodigoContable'].isin(codigosContables)]
 
 

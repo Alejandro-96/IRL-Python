@@ -71,6 +71,8 @@ class Ui(QtWidgets.QDialog):
 
     def openManual(self, event):
         print('Abrir manual')
+        os.system('explorer ' + ManualUsuario) 
+
 
     def folder(self):
         print('Abrir carpeta')

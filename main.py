@@ -44,6 +44,8 @@ archivosSegundaVez = [1 , 1, 1 , 2 , 1 , 2, 1, 1]
 # Obtener ruta de la carpeta documentos
 rutaDocumentos = os.path.join(os.path.expanduser('~'), 'Documents')
 rutaRobot = os.path.join(rutaDocumentos, 'RobotIRL')
+ManualUsuario = resource_path('Manual de Usuario.pdf')
+
     
 
 
