@@ -2,8 +2,6 @@ from base64 import encode
 from tkinter import messagebox
 import pandas as pd
 import os
-import openpyxl
-
 # Obtener ruta de la carpeta documentos
 rutaDocumentos = os.path.join(os.path.expanduser('~'), 'Documents')
 rutaRobot = os.path.join(rutaDocumentos, 'RobotIRL')

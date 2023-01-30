@@ -6,7 +6,6 @@ import re
 from tkinter import messagebox
 import pandas as pd
 
-import wget
 from utils.fecha import Fecha
 from utils.globals import *
 

@@ -7,9 +7,6 @@ from tkinter import messagebox
 import pandas as pd
 from utils.convert2csv import convertiracsv
 from utils.globals import *
-import requests
-import urllib3
-
 
 carpetas = [
     'CATALOGO DE CUENTAS',

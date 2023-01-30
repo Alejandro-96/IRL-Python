@@ -25,7 +25,7 @@ def creditosAprobados(fecha: Fecha, primeraVez:bool, wb: xw.Book):
 
     # Obtener el saldo de la cuenta 911500
     try:
-        saldo = tabla[tabla['CUENTA'] == '911500']['Saldo'].values[0]
+        saldo = tabla[tabla['CUENTA'] == 911500]['Saldo'].values[0]
     except:
         saldo = 0
 

@@ -2,7 +2,6 @@ import os
 from PyQt5.QtWidgets import QMessageBox
 import sys
 from utils.fecha import *
-import wget
 desviacion = ""
 
 fechaActual = Fecha(1, datetime.now().month, datetime.now().year)

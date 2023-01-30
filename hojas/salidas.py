@@ -17,6 +17,8 @@ def salidaCdatyAC(fecha: Fecha, primeraVez, wb: xw.Book):
     archivo = [archivo for archivo in archivos if fecha.as_Text() in archivo][0]
     archivo = os.path.join('{}/Archivos/{}'.format(rutaRobot, doc), archivo)
 
+    tabla1 = pd.read_csv(archivo, usecols=columnas, encoding='ANSI', sep=';', skiprows=3)
+    tabla1.dtypes
     for salida in salidas:
         print('Diligenciando {}. . .'.format(salida))
         dia = fecha.add_months(1).add_days(-1).dia
