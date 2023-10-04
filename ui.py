@@ -31,7 +31,7 @@ class Ui(QtWidgets.QDialog):
         self.lblError = self.findChild(QLabel, 'lblError')
         self.lblError.setText('')
 
-        # Quitar el boton ? del formulario
+        
         self.setWindowFlags(self.windowFlags() & ~QtCore.Qt.WindowContextHelpButtonHint)
 
         self.lblManual.mousePressEvent = self.openManual
@@ -65,7 +65,7 @@ class Ui(QtWidgets.QDialog):
 
 
     def closeEvent(self, event):
-        # This is executed when the window is closed
+      
         print('Cerrando ventana')
         event.accept()
 

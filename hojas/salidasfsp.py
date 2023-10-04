@@ -31,12 +31,12 @@ def salidasfsp(fecha: Fecha, wb: xw.Book):
     ws.range('B5').value = '{}/{}/{}'.format(dia, mes, fecha.anio)
    
 
-    if ws.range('A10').value == None : 
-        ws.range('A' + str(ultimaFilaSaldo)).value = '{}/{}/{}'.format(dia, mes, fecha.anio)  
-        ws.range('B' + str(ultimaFilaFecha)).value = saldo  
-    else : 
-        ws.range('A' + str(ultimaFilaSaldo + 1)).value = '{}/{}/{}'.format(dia, mes, fecha.anio)   
-        ws.range('B' + str(ultimaFilaFecha + 1)).value = saldo 
+    #if ws.range('A10').value == None : 
+    ws.range('A' + str(ultimaFilaSaldo)).value = '{}/{}/{}'.format(dia, mes, fecha.anio)  
+    ws.range('B' + str(ultimaFilaFecha)).value = saldo  
+    #else : 
+     #   ws.range('A' + str(ultimaFilaSaldo + 1)).value = '{}/{}/{}'.format(dia, mes, fecha.anio)   
+      #  ws.range('B' + str(ultimaFilaFecha + 1)).value = saldo 
 
 
     ws.range('B3').value = '{}/{}/{}'.format(31,fecha.add_months(13-int(mes)).add_days(-1).mes,fecha.anio)

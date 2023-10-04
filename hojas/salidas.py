@@ -12,7 +12,7 @@ salidas = ['Salidas de CDAT ', 'Salidas Ahorro Contractual']
 
 
 def salidaCdatyAC(fecha: Fecha, primeraVez, wb: xw.Book):
-    cuentas = [[211005, 211010, 211015], [212505, 212510, 212515, 212520]]
+    cuentas = [[211005, 211010, 211015,211020], [212505, 212510, 212515, 212520]]
     archivos = os.listdir('{}/Archivos/{}'.format(rutaRobot, doc))
     archivo = [archivo for archivo in archivos if fecha.as_Text() in archivo][0]
     archivo = os.path.join('{}/Archivos/{}'.format(rutaRobot, doc), archivo)

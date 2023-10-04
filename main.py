@@ -1,5 +1,6 @@
 import os
 import datetime
+import time
 from datetime import datetime
 from pandas import ExcelFile
 from hojas.ipm import ipm, ipmpat
@@ -85,6 +86,7 @@ def main(mes, anio, primeraVez):
     #planoInvisible = wb.macro('Visibility.makeInvisible') 
 
     #To do: Diligenciar carteras
+  
     diligenciarCarteras(wb, fecha)
     ipm(fecha, primeraVez, desviacion, wb)
     ipmpat(fecha, primeraVez, wb)
@@ -92,18 +94,15 @@ def main(mes, anio, primeraVez):
     recaudoAportes(fecha, primeraVez, wb)
     recaudoac(fecha, primeraVez, wb)
     recaudoap(fecha,primeraVez,wb)
-    cxc(fecha, primeraVez, wb)
-    cxp(fecha,wb) 
+    cxc(fecha, primeraVez, wb) 
     recaudoyremanentes(fecha,wb)
-    cxp(fecha,wb) 
-    recaudoyremanentes(fecha,wb)
+    cxp(fecha,wb)
     obligacionesFinancieras(fecha, primeraVez, wb)
     creditosAprobados(fecha,primeraVez, wb)
     gastosAdministrativos(fecha, primeraVez, wb)
     salidaCdatyAC(fecha, primeraVez, wb)
-    salidaCdatyAC(fecha, primeraVez, wb)
     salidasfsp(fecha,wb)
-    salidasap(fecha,primeraVez,wb)
+    salidasap(fecha,primeraVez,wb) 
     salidasao(fecha,wb)
     salidasp(fecha,primeraVez,wb)
   
@@ -114,8 +113,5 @@ def main(mes, anio, primeraVez):
         wb.save(rutaRobot + '/PlanosDiligenciados/PLANOIRL {} {}.xlsx'.format(mes, anio))
     except:
         print('Error al guardar el plano, es posible que ya haya un plano con este nombre abierto, por favor cierrelo.')
-    # Terminar el cronometro
-    end_time = datetime.now()
-    print('Tiempo de ejecucion: {}'.format(end_time - start_time))
 
     wb = xw.Book(rutaRobot + '/PlanosDiligenciados/PLANOIRL {} {}.xlsx'.format(mes, anio))

@@ -21,11 +21,27 @@ def salidasao(fecha: Fecha, wb: xw.Book):
 
     ws.range('B5').value = '{}/{}/{}'.format(ultimodia,mes,fecha.anio)
 
+    #borrar datos anteriores
+    ws.range('A9:B' + str(ultimodia + 8)).value = ''
+
+        
+
     for i in range(1, ultimodia + 1):
         dia = '0' + str(i) if i < 10 else str(i)
         saldo = tabla.get('Saldo')[i-1]
         ws.range('B' + str(i + 8)).value = saldo  
         ws.range('A' + str(i + 8)).value = '{}/{}/{}'.format(dia,mes,fecha.anio)
+    
+
+    #print(ultimodia, ultimodia + 1 )
+
+
+        
+ 
+
+
+
+
 
 
 

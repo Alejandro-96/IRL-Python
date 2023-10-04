@@ -29,9 +29,10 @@ def creditosAprobados(fecha: Fecha, primeraVez:bool, wb: xw.Book):
     except:
         saldo = 0
 
-    if primeraVez: 
-        ws.range('A' + str(ultimaFila)).value = '{}/{}/{}'.format(dia, mes, fecha.anio)
-        ws.range('B' + str(ultimaFila)).value = saldo
+    #if primeraVez: 
+    ws.range('A' + str(ultimaFila)).value = '{}/{}/{}'.format(dia, mes, fecha.anio)
+    ws.range('B' + str(ultimaFila)).value = saldo
+    """    
     else : 
         ws.range('A' + str(ultimaFila + 1 )).value = '{}/{}/{}'.format(dia, mes, fecha.anio)
         ws.range('B' + str(ultimaFila + 1)).value = saldo
@@ -39,5 +40,5 @@ def creditosAprobados(fecha: Fecha, primeraVez:bool, wb: xw.Book):
 
     # No se pudo escribir la formula, procedimos a cambiarla por BUSCARV
     # Las 2 formulas que calculan totales de esta hoja estaban mal.
-
+    """
 

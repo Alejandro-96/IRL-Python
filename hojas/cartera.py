@@ -21,7 +21,7 @@ codigosContables = [
     [146105, 146205],
     [144805],
     [140505],
-    [144405]
+    [140405]
 ]
 
 carpeta = 'INFORME INDIVIDUAL DE CARTERA DE CREDITO (MODIFICADO)'
